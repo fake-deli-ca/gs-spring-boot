@@ -25,6 +25,7 @@ test {
 }
 
 publishing {
+    version = project.hasProperty("releaseVersion") ? project.property("releaseVersion") : version
     repositories {
         maven {
             name = "GitHubPackages"
@@ -41,3 +42,5 @@ publishing {
         }
     }
 }
+
+publish.dependsOn assemble

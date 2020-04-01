@@ -20,4 +20,4 @@ jobs:
       env:
         USERNAME: fake-deli-ca
         TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      run: ./gradlew publish --info
+      run: ./gradlew assemble publish --info
